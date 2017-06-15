@@ -32,6 +32,7 @@
         <img id="foto2" draggable="true" ondragstart="drag(event)" src="img/foto_0920140822124434.jpg" alt="">
         <img id="foto3" draggable="true" ondragstart="drag(event)" src="img/i-62869.jpeg" alt="">
         <img id="foto4" draggable="true" ondragstart="drag(event)" src="img/p3.jpg" alt="">
+        <!-- draggable="true" es necesaria para activar el evento / luego para arrastrar tenemos el evento ondragstart="nombrefuncion(propiedad)" -->
       </div>
       <div class="col-md-8">
         <img src="img/m1_768_11MS.jpg" alt="">
@@ -42,6 +43,8 @@
         <div class="marco-foto" ondragover="permitirDrop(event)" ondrop="drop(event)"></div>
         <div class="marco-foto" ondragover="permitirDrop(event)" ondrop="drop(event)"></div>
         <div class="marco-foto" ondragover="permitirDrop(event)" ondrop="drop(event)"></div>
+        <!-- cajas contenedoras donde soltaremos los elementos / a las cajas contenedores se les pone ondragover / 
+        el area o cajas donde soltaremos el elemento se denominara ondrop -->
       </div>
     </div>
   </section>

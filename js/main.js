@@ -70,16 +70,24 @@ function agregaPosteo() {
   document.getElementById("cajaposteos").value = "";
 }
 
+
+/* Se crea la funcion arrastrar, console para inspeccionar como funciona, con setData generamos la acción */
 function drag(ev) {
   console.log(ev.target.src);
+  // indicamos el tipo de texto a insertar ("text")
   ev.dataTransfer.setData('text', ev.target.id);
 }
 
+// inicializamos drop
 function permitirDrop(ev){
+  // evitamos que el navegador manipule nuestros datos
   ev.preventDefault();
 }
+
 function drop(ev) {
   ev.preventDefault();
+  // tomamos el dato que hemos arrastrado
   var id_foto = ev.dataTransfer.getData('text');
+  // agregamos el elmento arrastrado al elemento en el que se produjo el evento ondrop.
   ev.target.appendChild(document.getElementById(id_foto));
 }
